@@ -12,19 +12,19 @@ Esta API calcula fechas laborales futuras sumando días y/o horas hábiles a par
 
 ## 🚀 Demo
 
-**URL de la API desplegada**: `https://YOUR-API-URL.execute-api.REGION.amazonaws.com/prod/working-days`
+**URL de la API desplegada**: ` https://o6vmfqdmvb.execute-api.us-east-1.amazonaws.com/prod/working-days`
 
 ### Ejemplos de uso:
 
 ```bash
 # Sumar 3 horas desde el momento actual
-curl "https://YOUR-API-URL/working-days?hours=3"
+curl " https://o6vmfqdmvb.execute-api.us-east-1.amazonaws.com/prod/working-days?hours=3"
 
 # Sumar 2 días y 4 horas
-curl "https://YOUR-API-URL/working-days?days=2&hours=4"
+curl " https://o6vmfqdmvb.execute-api.us-east-1.amazonaws.com/prod/working-days?days=2&hours=4"
 
 # Usar fecha específica como punto de partida
-curl "https://YOUR-API-URL/working-days?date=2025-04-10T15:00:00Z&days=5&hours=4"
+curl " https://o6vmfqdmvb.execute-api.us-east-1.amazonaws.com/prod/working-days?date=2025-04-10T15:00:00Z&days=5&hours=4"
 ```
 
 ## 🛠️ Tecnologías
@@ -49,7 +49,7 @@ curl "https://YOUR-API-URL/working-days?date=2025-04-10T15:00:00Z&days=5&hours=4
 
 1. **Clonar el repositorio**
 ```bash
-git clone https://github.com/YOUR-USERNAME/working-days-api.git
+git clone https://github.com/Kevingarzon94/lambda-workingDays-api
 cd working-days-api
 ```
 
@@ -122,7 +122,7 @@ WorkingDaysApiStack.ApiEndpoint = https://xxxxx.execute-api.region.amazonaws.com
 ### 4. Verificar deployment
 ```bash
 # Probar endpoint desplegado
-curl "https://tu-api-url/working-days?hours=1"
+curl " https://o6vmfqdmvb.execute-api.us-east-1.amazonaws.com/prod/working-days?hours=1"
 ```
 
 ## 📖 API Reference
