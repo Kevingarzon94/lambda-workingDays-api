@@ -1,4 +1,3 @@
-export * from './Holiday'
 export * from './SuccessResponse'
 export * from './ErrorResponse'
 export * from './ValidatedParams'

@@ -68,29 +68,48 @@ const addWorkingDays = async (date: Date, days: number): Promise<Date> => {
 }
 
 const addWorkingHours = async (date: Date, hours: number): Promise<Date> => {
-  const result = new Date(date)
-  let remainingHours = hours
+  let result = new Date(date)
+  let hoursToAdd = hours
 
-  const fullDays = Math.floor(remainingHours / WORK_HOURS.DAILY_HOURS)
-  if (fullDays > 0) {
-    const daysResult = await addWorkingDays(result, fullDays)
-    result.setTime(daysResult.getTime())
-    remainingHours = remainingHours % WORK_HOURS.DAILY_HOURS
-  }
+  while (hoursToAdd > 0) {
+    const currentHour = result.getUTCHours()
 
-  while (remainingHours > 0) {
-    result.setUTCHours(result.getUTCHours() + 1)
+    let hoursLeftToday = 0
 
-    if (result.getUTCHours() === WORK_HOURS.LUNCH_START_UTC) {
-      result.setUTCHours(WORK_HOURS.LUNCH_END_UTC, 0, 0, 0)
+    if (currentHour < WORK_HOURS.LUNCH_START_UTC) {
+      hoursLeftToday = Math.min(
+        WORK_HOURS.LUNCH_START_UTC - currentHour,
+        hoursToAdd
+      )
+      result.setUTCHours(currentHour + hoursLeftToday, 0, 0, 0)
+      hoursToAdd -= hoursLeftToday
+
+      if (result.getUTCHours() === WORK_HOURS.LUNCH_START_UTC && hoursToAdd > 0) {
+        result.setUTCHours(WORK_HOURS.LUNCH_END_UTC, 0, 0, 0)
+
+        const hoursAfterLunch = Math.min(
+          WORK_HOURS.END_UTC - WORK_HOURS.LUNCH_END_UTC,
+          hoursToAdd
+        )
+        result.setUTCHours(WORK_HOURS.LUNCH_END_UTC + hoursAfterLunch, 0, 0, 0)
+        hoursToAdd -= hoursAfterLunch
+      }
+    } else if (currentHour >= WORK_HOURS.LUNCH_END_UTC && currentHour < WORK_HOURS.END_UTC) {
+      hoursLeftToday = Math.min(
+        WORK_HOURS.END_UTC - currentHour,
+        hoursToAdd
+      )
+      result.setUTCHours(currentHour + hoursLeftToday, 0, 0, 0)
+      hoursToAdd -= hoursLeftToday
     }
 
-    if (result.getUTCHours() >= WORK_HOURS.END_UTC) {
-      const nextDay = await getNextWorkingDayAtTime(result, WORK_HOURS.START_UTC)
-      result.setTime(nextDay.getTime())
+    if (hoursToAdd > 0) {
+      result.setUTCDate(result.getUTCDate() + 1)
+      while (!(await isWorkingDay(result))) {
+        result.setUTCDate(result.getUTCDate() + 1)
+      }
+      result.setUTCHours(WORK_HOURS.START_UTC, 0, 0, 0)
     }
-
-    remainingHours--
   }
 
   return result

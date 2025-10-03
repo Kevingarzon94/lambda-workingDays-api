@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0d2aa1a7-7fe8-4900-b764-052cdbc9f2da" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lambda/services/dateCalculator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lambda/services/dateCalculator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lambda/services/holidayService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lambda/services/holidayService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lambda/types/Holiday.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/lambda/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/lambda/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +80,7 @@
       <updated>1759449094840</updated>
       <workItem from="1759449095901" duration="2274000" />
       <workItem from="1759451549713" duration="47000" />
-      <workItem from="1759451607638" duration="25398000" />
+      <workItem from="1759451607638" duration="28067000" />
     </task>
     <servers />
   </component>
@@ -93,9 +96,7 @@
         <option value="$PROJECT_DIR$/lib/lambda/types/ErrorResponse.d.ts" />
         <option value="$PROJECT_DIR$/lib/lambda/types/index.d.ts" />
         <option value="$PROJECT_DIR$/lib/lambda/types/ValidatedParams.d.ts" />
-        <option value="$PROJECT_DIR$/lib/lambda/types/Holiday.js" />
         <option value="$PROJECT_DIR$/lib/lambda/types/ValidatedParams.js" />
-        <option value="$PROJECT_DIR$/lib/lambda/types/Holiday.d.ts" />
         <option value="$PROJECT_DIR$/lib/lambda/types/SuccessResponse.js" />
         <option value="$PROJECT_DIR$/lib/lambda/types/index.js" />
         <option value="$PROJECT_DIR$/lib/lambda/types/WorkingDaysParams.js" />

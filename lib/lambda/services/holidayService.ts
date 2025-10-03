@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { Holiday } from '../types'
 
 let holidaysCache: Set<string> | null = null
 const HOLIDAYS_URL = 'https://content.capta.co/Recruitment/WorkingDays.json'
@@ -10,12 +9,12 @@ export const getHolidays = async (): Promise<Set<string>> => {
   }
 
   try {
-    const response = await axios.get<Holiday[]>(HOLIDAYS_URL)
-    holidaysCache = new Set(response.data.map(holiday => holiday.date))
+    const response = await axios.get<string[]>(HOLIDAYS_URL)
+    holidaysCache = new Set(response.data)
     return holidaysCache
   } catch (error) {
     console.error('Error fetching holidays:', error)
-    throw error
+    return new Set();
   }
 }
 
