@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0d2aa1a7-7fe8-4900-b764-052cdbc9f2da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/lib/lambda/handlers/workingDays.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lambda/services/dateCalculator.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lambda/services/holidayService.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lambda/types/ErrorResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lambda/types/Holiday.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lambda/types/SuccessResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lambda/types/ValidatedParams.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lambda/types/WorkingDaysParams.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lambda/types/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/lambda/utils/validators.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/local-test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +24,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Kevingarzon94"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Kevingarzon94/lambda-workingDays-api.git",
+    "accountId": "b39c2b36-17d6-4c87-a2b9-fa18df2537f2"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -45,7 +49,7 @@
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "F:/Proyectos/working-days-api",
     "node.js.detected.package.eslint": "true",
@@ -74,7 +78,7 @@
       <updated>1759449094840</updated>
       <workItem from="1759449095901" duration="2274000" />
       <workItem from="1759451549713" duration="47000" />
-      <workItem from="1759451607638" duration="24244000" />
+      <workItem from="1759451607638" duration="24712000" />
     </task>
     <servers />
   </component>
